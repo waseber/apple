@@ -1,0 +1,13 @@
+@import "helpers/fonts.scss";
+@import "helpers/variables.scss";
+
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $main__background--color;
+    font-family: $base-font;
+    font-size: 75%; //allows us to use REM
+}
+
