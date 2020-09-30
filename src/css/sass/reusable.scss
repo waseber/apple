@@ -2,6 +2,10 @@
     background: #FFF;
 }
 
+.background-black{
+    background: #000;
+}
+
 .display-flex{
     display: flex;
 }
@@ -24,6 +28,9 @@
 
 .pull-right{
     align-self: flex-end;
+}
+.w-100{
+    width: 100% !important;
 }
 
 .padding-10{
