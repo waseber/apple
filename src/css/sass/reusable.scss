@@ -1,0 +1,35 @@
+.background-white{
+    background: #FFF;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.pull-left{
+    align-self: flex-start;
+}
+
+.pull-right{
+    align-self: flex-end;
+}
+
+.padding-10{
+    padding: 10%;
+}
+
+.drop-shadow{
+    box-shadow: 0px 5px 5px;
+}

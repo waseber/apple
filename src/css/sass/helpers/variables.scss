@@ -1,7 +1,19 @@
 
 //colors
 $main__background--color: #FFFFFF;
+$light-blue: #5AC8FA;
+$background-gradient: linear-gradient($light-blue, white);
+$link-color: #5AC8FA;
 
 
 //fonts
 $base-font: "Poppins";
+$h1-font: "Poppins-Black";
+$h2-font: "Poppins-Black";
+$h3-font: "Poppins-Black";
+$label-font: "Poppins";
+$button-font: "Poppins-Black";
+$form-field-font-size: 14px;
+
+//borders
+$form-field-border: 1px solid #707070;

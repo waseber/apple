@@ -1,13 +1,79 @@
 @import "helpers/fonts.scss";
 @import "helpers/variables.scss";
+@import "./reusable.scss";
 
 
 html,
 body{
     margin: 0;
     padding: 0;
+    max-height: 100vh;
+    width: 100vw;
+    display: flex;
     background-color: $main__background--color;
+    background-image: $background-gradient;
+    background-attachment: fixed;
     font-family: $base-font;
     font-size: 75%; //allows us to use REM
+    font-size: 14px;
 }
 
+
+#root{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.App{
+    width: 100%;
+}
+a{
+    color: $link-color;
+}
+h2{
+    font-family: $h2-font;
+    font-size: 36px;
+}
+
+#SignInUp{
+    width: 510px;
+    padding: 15px;
+}
+form{
+    width: 100%;
+}
+form *{
+    border-radius: 0;
+}
+
+input{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: $form-field-border;
+    font-size: $form-field-font-size;
+
+}
+
+button{
+    padding: 5px;
+    height: 50px;
+    width: 150px;
+    background: black;
+    border: 0;
+    font-size: 14px;
+    font-family: $button-font;
+    color: white;
+}
+
+label{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: $label-font;
+    font-size: 16px;
+    text-transform: capitalize;
+}

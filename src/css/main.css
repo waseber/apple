@@ -62,10 +62,96 @@
   font-family: 'Poppins-Thin-Italic';
   src: url("../fonts/Poppins-ThinItalic.ttf") format("truetype"); }
 
+.background-white {
+  background: #FFF; }
+
+.display-flex {
+  display: flex; }
+
+.flex-col {
+  flex-direction: column; }
+
+.justify-center {
+  justify-content: center; }
+
+.align-center {
+  align-items: center; }
+
+.pull-left {
+  align-self: flex-start; }
+
+.pull-right {
+  align-self: flex-end; }
+
+.padding-10 {
+  padding: 10%; }
+
+.drop-shadow {
+  box-shadow: 0px 5px 5px; }
+
 html,
 body {
   margin: 0;
   padding: 0;
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
   background-color: #FFFFFF;
+  background-image: linear-gradient(#5AC8FA, white);
+  background-attachment: fixed;
   font-family: "Poppins";
-  font-size: 75%; }
+  font-size: 75%;
+  font-size: 14px; }
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-self: center;
+  align-self: center; }
+
+.App {
+  width: 100%; }
+
+a {
+  color: #5AC8FA; }
+
+h2 {
+  font-family: "Poppins-Black";
+  font-size: 36px; }
+
+#SignInUp {
+  width: 510px;
+  padding: 15px; }
+
+form {
+  width: 100%; }
+
+form * {
+  border-radius: 0; }
+
+input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #707070;
+  font-size: 14px; }
+
+button {
+  padding: 5px;
+  height: 50px;
+  width: 150px;
+  background: black;
+  border: 0;
+  font-size: 14px;
+  font-family: "Poppins-Black";
+  color: white; }
+
+label {
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  font-size: 16px;
+  text-transform: capitalize; }
