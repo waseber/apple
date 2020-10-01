@@ -1,12 +1,12 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 
 const IconNav = ({position}) => (
     <nav>
         <ul className="">
-            <li><Link>iphone</Link></li>
-            <li><Link>macbook</Link></li>
-            <li><Link>watch</Link></li>
+            <li><NavLink to="/iphone" className="iconNav__iconLink">iphone</NavLink></li>
+            <li><NavLink to="/macbook-pro" className="iconNav__iconLink">macbook</NavLink></li>
+            <li><NavLink to="/apple-watch" className="iconNav__iconLink">watch</NavLink></li>
         </ul>
     </nav>
 );

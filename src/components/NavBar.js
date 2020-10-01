@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import logo from '../apple_logo.svg';
 
 const NavBar = ({landing}) => {
@@ -20,13 +20,13 @@ const NavBar = ({landing}) => {
                     </div>
                     <ul>
                         <li>
-                            <Link to="/iphone" className="nav__textLink">iPhone</Link>
+                            <NavLink to="/iphone" className="nav__textLink">iPhone</NavLink>
                         </li>
                         <li>
-                            <Link to="/macbook-pro" className="nav__textLink">MacBook Pro</Link>
+                            <NavLink to="/macbook-pro" className="nav__textLink">MacBook Pro</NavLink>
                         </li>
                         <li>
-                            <Link to="/apple-watch" className="nav__textLink">Watch</Link>
+                            <NavLink to="/apple-watch" className="nav__textLink">Watch</NavLink>
                         </li>
                         <li>
                             <Link to="" className="nav__textLink nav__textLink--button">Notify me</Link>

@@ -124,6 +124,10 @@ label{
     text-decoration: none;
 }
 
+.nav__textLink.active{
+    font-family: 'Poppins-Bold';
+}
+
 .nav__textLink--button{
     padding: 10px 20px;
     background: $light-blue;
@@ -131,6 +135,17 @@ label{
     font-family: 'Poppins-Medium';
     border-radius: 23px;
 
+}
+
+.iconNav__iconLink{
+    color: $nav-link-color;
+    opacity: 0.5;
+    font-size: 20px;
+    text-decoration: none; 
+}
+
+.iconNav__iconLink.active{
+    opacity: 1; 
 }
 
 //landing page
