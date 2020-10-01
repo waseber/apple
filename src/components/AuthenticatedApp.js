@@ -4,18 +4,25 @@ import {
     Route,
     Switch} from 'react-router-dom';
 import LandingPage from '../pages/landingPage';
+import WelcomePage from '../pages/welcomePage';
+import IphonePage from '../pages/iphonePage';
+import MacbookPage from '../pages/macbookPage';
+import WatchPage from '../pages/watchPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 const AuthenticatedApp = () => (
     <>
     <Router>
-        <section className="display-flex flex-col">
-          <Switch>
-            <Route path="/" component={LandingPage} exact/>
-            <Route component={NotFoundPage} />
-          </Switch>
-        </section>
-        
+        <div className="App">
+            <Switch>
+                <Route path="/" component={LandingPage} exact/>
+                <Route path="/welcome" component={WelcomePage}/>
+                <Route path="/iphone" component={IphonePage}/>
+                <Route path="/macbook-pro" component={MacbookPage}/>
+                <Route path="/apple-watch" component={WatchPage}/>
+                <Route component={NotFoundPage} />
+            </Switch>   
+        </div>     
     </Router>    
     </>
 );

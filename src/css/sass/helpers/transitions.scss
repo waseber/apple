@@ -1,0 +1,14 @@
+.slide-in-left{
+    right:100%;
+    left: auto;
+    transition: all 0.5s ease;
+}
+
+.shrink-to-size{
+    animation: shrink-to-size 3s linear;
+}
+
+@keyframes shrink-to-size{
+    from{transform: scale(1.5);}
+    to{transform: scale(1);}
+}

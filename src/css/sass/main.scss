@@ -1,6 +1,7 @@
 @import "helpers/fonts.scss";
 @import "helpers/variables.scss";
 @import "./reusable.scss";
+@import "helpers/transitions.scss";
 
 
 html,
@@ -11,11 +12,10 @@ body{
     width: 100vw;
     display: flex;
     background-color: $main__background--color;
-    background-image: $background-gradient;
-    background-attachment: fixed;
     font-family: $base-font;
     font-size: 75%; //allows us to use REM
     font-size: 14px;
+    overflow: hidden;
 }
 
 
@@ -28,15 +28,21 @@ body{
 }
 .App{
     width: 100%;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+.page{
+    position: absolute;
+    height: 100%;
+    top:0;
+    right: 0;
+    left: 0;
 }
 a{
     color: $link-color;
 }
-ul{
-    margin: 0 100px;
-    display: flex;
-    justify-content: space-between;
-}
+
 li{
     list-style-type: none;
     padding: 10px;
@@ -88,12 +94,19 @@ label{
 }
 
 //navbar
-nav{
+.top-nav{
     width: 100vw;
     background-color: #FFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    ul{
+        margin: 0 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
 #nav-logo-container{
     background: #000;
@@ -118,4 +131,11 @@ nav{
     font-family: 'Poppins-Medium';
     border-radius: 23px;
 
+}
+
+//landing page
+
+#date-counter{
+    font-family: 'Poppins-Bold';
+    font-size: 62px;
 }

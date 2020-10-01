@@ -14,19 +14,19 @@ const NavBar = ({landing}) => {
     } else {
         return (
             <>
-                <nav>
+                <nav className="top-nav">
                     <div id="nav-logo-container" className="">
-                        <img src={logo} height="80" width="80" />
+                        <Link to="/"><img src={logo} height="80" width="80" /></Link>
                     </div>
                     <ul>
                         <li>
-                            <Link to="" className="nav__textLink">iPhone</Link>
+                            <Link to="/iphone" className="nav__textLink">iPhone</Link>
                         </li>
                         <li>
-                            <Link to="" className="nav__textLink">MacBook Pro</Link>
+                            <Link to="/macbook-pro" className="nav__textLink">MacBook Pro</Link>
                         </li>
                         <li>
-                            <Link to="" className="nav__textLink">Watch</Link>
+                            <Link to="/apple-watch" className="nav__textLink">Watch</Link>
                         </li>
                         <li>
                             <Link to="" className="nav__textLink nav__textLink--button">Notify me</Link>

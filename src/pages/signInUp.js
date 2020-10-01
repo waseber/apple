@@ -32,7 +32,7 @@ const SignInUp = ({InUp}) => {
     if(InUp == 'up'){
         formTypeText = 'Sign-Up'
         return(
-            <>   
+            <section className="slide-in-left page background-gradient display-flex flex-col justify-center align-center">   
                 <div id="SignInUp" className="display-flex flex-col justify-center align-center">
                     <form 
                         className="background-white padding-10 drop-shadow display-flex flex-col align-center "
@@ -74,11 +74,11 @@ const SignInUp = ({InUp}) => {
                 </div>
                 
                 
-            </>
+            </section>
             );
     } else {
         return(
-            <>   
+            <section className="slide-in-left page background-gradient display-flex flex-col justify-center align-center">   
                 <div id="SignInUp" className="display-flex flex-col justify-center align-center">                    
                     <form 
                         className="background-white padding-10 drop-shadow display-flex flex-col align-center"
@@ -109,7 +109,7 @@ const SignInUp = ({InUp}) => {
                     <p className="pull-right">Not Registered? <Link to="/sign-up">Sign-Up</Link></p>
                 </div>
                 
-            </>
+            </section>
             );
     }
     
