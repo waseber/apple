@@ -500,7 +500,7 @@ label {
 
 #iphone-page-content {
   display: grid;
-  grid-template-columns: repeat(1fr, 3);
+  grid-template-columns: 1fr 20vw 1fr;
   grid-template-rows: 1fr 30vh;
   grid-template-areas: "blurb blurb image" "buy thumbs image"; }
 
@@ -516,6 +516,10 @@ label {
 #iphone-blurb {
   grid-area: blurb; }
 
+.thumbs-container {
+  grid-area: thumbs;
+  padding-top: 5vh; }
+
 .iphone-thumbs {
   margin: 0 5px;
   height: 20vh; }
@@ -523,6 +527,12 @@ label {
 #thumb-slider {
   height: 8px;
   width: 200px; }
+
+.image-container {
+  grid-area: image;
+  position: relative;
+  width: 20vw;
+  height: 80vh; }
 
 #macbook-blurb {
   background-color: #000; }
