@@ -1,0 +1,19 @@
+label > input[type="radio"] {
+    display: none;
+  }
+  label > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 45px;
+    height: 45px;
+    transform: translate(-9px, -9px);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+  }
+  label > input[type="radio"]:checked + *::before {
+    //background: radial-gradient(teal 0%, teal 40%, transparent 50%, transparent);
+    border-color: $red;
+  }

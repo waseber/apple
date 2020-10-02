@@ -8,12 +8,21 @@ const SignInUp = ({InUp}) => {
     const [email, setEmail] = useState("");
     const [password, setPass] = useState("");
 
+    const SlideRight = ()=>{
+        const section = document.getElementsByTagName('section')[0];
+        section.classList.add('slide-in-right');
+        section.classList.remove('slide-in-right');
+    
+    }
+
     const signUpSubmit = (event) => {
         event.preventDefault();
         sessionStorage.setItem('name', name);
         sessionStorage.setItem('email', email);
         sessionStorage.setItem('password', password);
-        alert('Yay!');
+        SlideRight();
+        console.log('hi')
+        window.location.href = '/sign-in';
     }
     
     const signInSubmit = (event) => {
@@ -21,7 +30,7 @@ const SignInUp = ({InUp}) => {
         event.preventDefault();
         if((sessionStorage.getItem("email") == email) && (sessionStorage.getItem("password") == password)){
             sessionStorage.setItem("isAuth", true);
-            return <Redirect to="/" />
+            window.location.href = '/';
         } else {
             //Auth error
             alert('Username or password error');
@@ -78,7 +87,7 @@ const SignInUp = ({InUp}) => {
             );
     } else {
         return(
-            <section className="slide-in-left page background-gradient display-flex flex-col justify-center align-center">   
+            <section className="page background-gradient display-flex flex-col justify-center align-center">   
                 <div id="SignInUp" className="display-flex flex-col justify-center align-center">                    
                     <form 
                         className="background-white padding-10 drop-shadow display-flex flex-col align-center"

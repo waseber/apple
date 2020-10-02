@@ -5,7 +5,7 @@ import logo from '../apple_logo.svg';
 const NavBar = ({landing}) => {
     if(landing == "true"){
         return (
-            <nav>
+            <nav className="top-nav">
                 <div id="nav-logo-container" className="w-100">
                     <img src={logo} height="80" width="80" />
                 </div>

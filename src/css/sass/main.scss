@@ -2,6 +2,7 @@
 @import "helpers/variables.scss";
 @import "./reusable.scss";
 @import "helpers/transitions.scss";
+@import "helpers/radios.scss";
 
 
 html,
@@ -41,15 +42,33 @@ body{
 }
 a{
     color: $link-color;
+    text-decoration: none;
 }
 
 li{
     list-style-type: none;
     padding: 10px;
 }
+h1{
+    margin: 0;
+    font-family: $h1-font;
+    font-size: 2rem;
+}
 h2{
+    margin: 0;
     font-family: $h2-font;
-    font-size: 36px;
+    font-size: 5rem;
+    line-height: 1.2;
+}
+
+h3{
+
+}
+
+h4{
+    margin: 0;
+    font-family: 'Poppins-Bold';
+    font-size: 5vh;
 }
 // Forms
 #SignInUp{
@@ -96,6 +115,7 @@ label{
 //navbar
 .top-nav{
     width: 100vw;
+    height: 10vh;
     background-color: #FFF;
     display: flex;
     justify-content: space-between;
@@ -110,8 +130,8 @@ label{
 }
 #nav-logo-container{
     background: #000;
-    height: 100px;
-    width: 100px;
+    height: 10vh;
+    width: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,7 +140,7 @@ label{
 .nav__textLink{
     color: $nav-link-color;
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 2vh;
     text-decoration: none;
 }
 
@@ -134,7 +154,12 @@ label{
     color: #FFF;
     font-family: 'Poppins-Medium';
     border-radius: 23px;
-
+}
+.iconNav--right{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .iconNav__iconLink{
@@ -149,8 +174,98 @@ label{
 }
 
 //landing page
-
 #date-counter{
     font-family: 'Poppins-Bold';
     font-size: 62px;
+}
+
+//product pages
+
+.buy-now-red{
+    color: $red;
+    font-family: 'Poppins-Bold';
+    font-size: 20px;
+}
+
+#iphone-blurb,
+#watch-blurb{
+    padding: 50px;
+
+    p{
+        font-size: 2.5vh;
+        color: #999;
+        line-height: 1.5;
+    }
+}
+
+#macbook-blurb{
+    background-color: #000;
+
+    h1{
+        color: $light-blue;
+    }
+    h2{
+        color: #FFF;
+    }
+}
+#macbook-image{
+    margin-right: 20vw;
+    flex-grow: 1;
+    background: linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0),rgba(0,0,0,1)), url(/Images/macbook-pro.jpg) left top no-repeat;
+    background-size: contain;
+
+}
+
+#macbook-footer{
+    margin-top: 5vh;
+    height: 30vh;
+    display: flex;
+}
+
+#desktop-image{
+    height: 100%;
+    width: 40%;
+    background: url(/Images/desktop.jpg) center top no-repeat;
+    background-size: cover;
+}
+
+#subscribe-modal{
+    position: absolute;
+    right: 0;
+    padding: 20px 30px;
+    height: 30vh;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //tranistion
+    margin-top: -10vh;
+    transition: margin-top 3s ease;
+
+    form{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.image-container{
+    position: relative;
+    height: 60vh;
+    width: 100%
+}
+
+.watch-image{
+    position: absolute;
+    height: 60vh;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: black;
 }

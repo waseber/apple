@@ -82,7 +82,12 @@
 .pos-abs {
   position: absolute !important; }
 
-.page-content {
+.page-content-margins {
+  margin: 0 auto;
+  height: 100%;
+  width: calc(100% - 18vw); }
+
+.page-content-left-margin {
   margin: 0 0 0 100px;
   width: 100%;
   height: 100%; }
@@ -109,6 +114,12 @@
 .justify-center {
   justify-content: center; }
 
+.justify-bottom {
+  justify-content: flex-end; }
+
+.justify-space {
+  justify-content: space-between; }
+
 .align-center {
   align-items: center; }
 
@@ -118,11 +129,17 @@
 .pull-right {
   align-self: flex-end; }
 
+.w-50 {
+  width: 50% !important; }
+
 .w-100 {
   width: 100% !important; }
 
 .h-100 {
   height: 100% !important; }
+
+.mt-10p {
+  margin-top: 10px !important; }
 
 .padding-10 {
   padding: 10%; }
@@ -130,10 +147,26 @@
 .drop-shadow {
   box-shadow: 0px 5px 5px #888888; }
 
+.red {
+  color: #FF2D55; }
+
+.bold {
+  font-family: 'Poppins-Bold'; }
+
+.muted {
+  color: #ccc; }
+
 .slide-in-left {
-  right: 100%;
-  left: auto;
-  transition: all 0.5s ease; }
+  animation: slide-in-left 0.5s ease; }
+
+.slide-in-right {
+  animation: slide-in-left 0.5s ease reverse; }
+
+@keyframes slide-in-left {
+  from {
+    left: 100%; }
+  to {
+    left: 0; } }
 
 .shrink-to-size {
   animation: shrink-to-size 3s linear; }
@@ -143,6 +176,41 @@
     transform: scale(1.5); }
   to {
     transform: scale(1); } }
+
+.gradient-overlay {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  height: 100%;
+  width: 100%; }
+
+.fade-in {
+  animation: fade 0.5s ease; }
+
+.fade-out {
+  animation: fade 0.5s ease reverse; }
+
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+label > input[type="radio"] {
+  display: none; }
+
+label > input[type="radio"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 45px;
+  height: 45px;
+  transform: translate(-9px, -9px);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: black; }
+
+label > input[type="radio"]:checked + *::before {
+  border-color: #FF2D55; }
 
 html,
 body {
@@ -178,15 +246,28 @@ body {
   left: 0; }
 
 a {
-  color: #5AC8FA; }
+  color: #5AC8FA;
+  text-decoration: none; }
 
 li {
   list-style-type: none;
   padding: 10px; }
 
+h1 {
+  margin: 0;
+  font-family: "Poppins-Bold";
+  font-size: 2rem; }
+
 h2 {
-  font-family: "Poppins-Black";
-  font-size: 36px; }
+  margin: 0;
+  font-family: "Poppins-Bold";
+  font-size: 5rem;
+  line-height: 1.2; }
+
+h4 {
+  margin: 0;
+  font-family: 'Poppins-Bold';
+  font-size: 5vh; }
 
 #SignInUp {
   width: 510px;
@@ -226,6 +307,7 @@ label {
 
 .top-nav {
   width: 100vw;
+  height: 10vh;
   background-color: #FFF;
   display: flex;
   justify-content: space-between;
@@ -237,8 +319,8 @@ label {
 
 #nav-logo-container {
   background: #000;
-  height: 100px;
-  width: 100px;
+  height: 10vh;
+  width: 10vw;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -246,7 +328,7 @@ label {
 .nav__textLink {
   color: #707070;
   font-family: 'Poppins';
-  font-size: 20px;
+  font-size: 2vh;
   text-decoration: none; }
 
 .nav__textLink.active {
@@ -258,6 +340,12 @@ label {
   color: #FFF;
   font-family: 'Poppins-Medium';
   border-radius: 23px; }
+
+.iconNav--right {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .iconNav__iconLink {
   color: #707070;
@@ -271,3 +359,75 @@ label {
 #date-counter {
   font-family: 'Poppins-Bold';
   font-size: 62px; }
+
+.buy-now-red {
+  color: #FF2D55;
+  font-family: 'Poppins-Bold';
+  font-size: 20px; }
+
+#iphone-blurb,
+#watch-blurb {
+  padding: 50px; }
+  #iphone-blurb p,
+  #watch-blurb p {
+    font-size: 2.5vh;
+    color: #999;
+    line-height: 1.5; }
+
+#macbook-blurb {
+  background-color: #000; }
+  #macbook-blurb h1 {
+    color: #5AC8FA; }
+  #macbook-blurb h2 {
+    color: #FFF; }
+
+#macbook-image {
+  margin-right: 20vw;
+  flex-grow: 1;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0), black), url(/Images/macbook-pro.jpg) left top no-repeat;
+  background-size: contain; }
+
+#macbook-footer {
+  margin-top: 5vh;
+  height: 30vh;
+  display: flex; }
+
+#desktop-image {
+  height: 100%;
+  width: 40%;
+  background: url(/Images/desktop.jpg) center top no-repeat;
+  background-size: cover; }
+
+#subscribe-modal {
+  position: absolute;
+  right: 0;
+  padding: 20px 30px;
+  height: 30vh;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -10vh;
+  transition: margin-top 3s ease; }
+  #subscribe-modal form {
+    display: flex;
+    justify-content: space-between; }
+
+.image-container {
+  position: relative;
+  height: 60vh;
+  width: 100%; }
+
+.watch-image {
+  position: absolute;
+  height: 60vh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: black; }

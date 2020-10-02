@@ -1,7 +1,14 @@
 .slide-in-left{
-    right:100%;
-    left: auto;
-    transition: all 0.5s ease;
+    animation: slide-in-left 0.5s ease;
+}
+
+.slide-in-right{
+    animation: slide-in-left 0.5s ease reverse;
+}
+
+@keyframes slide-in-left{
+    from{left:100%;}
+    to{left: 0;}
 }
 
 .shrink-to-size{
@@ -11,4 +18,23 @@
 @keyframes shrink-to-size{
     from{transform: scale(1.5);}
     to{transform: scale(1);}
+}
+
+.gradient-overlay{
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5),rgba(255,255,255,0.5),rgba(0,0,0,0.5));
+    height: 100%;
+    width: 100%;
+}
+
+.fade-in{
+    animation: fade 0.5s ease;
+}
+
+.fade-out{
+    animation: fade 0.5s ease reverse;
+}
+
+@keyframes fade{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
