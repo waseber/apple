@@ -156,6 +156,15 @@
 .muted {
   color: #ccc; }
 
+.ani-fast {
+  animation-duration: 0.5s; }
+
+.ani-medium {
+  animation-duration: 1s; }
+
+.ani-slow {
+  animation-duration: 3s !important; }
+
 .slide-in-left {
   animation: slide-in-left 0.5s ease; }
 
@@ -167,6 +176,43 @@
     left: 100%; }
   to {
     left: 0; } }
+
+.slide-up-from-bottom {
+  animation-name: slide-up-from-bottom;
+  animation-duration: 1s;
+  animation-timing-function: ease; }
+
+@keyframes slide-up-from-bottom {
+  from {
+    margin-top: 10%; }
+  to {
+    margin-top: 0; } }
+
+.slide-in-from-left {
+  animation-name: slide-in-from-left;
+  animation-duration: 1s;
+  animation-timing-function: ease; }
+
+@keyframes slide-in-from-left {
+  from {
+    margin-left: -10%;
+    margin-right: 10%; }
+  to {
+    margin-left: 0;
+    margin-right: 0; } }
+
+.slide-in-from-left-more {
+  animation-name: slide-in-from-left-more;
+  animation-duration: 1s;
+  animation-timing-function: ease; }
+
+@keyframes slide-in-from-left-more {
+  from {
+    margin-left: -20%;
+    margin-right: 20%; }
+  to {
+    margin-left: 0;
+    margin-right: 0; } }
 
 .shrink-to-size {
   animation: shrink-to-size 3s linear; }

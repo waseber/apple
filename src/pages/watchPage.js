@@ -33,7 +33,7 @@ const RemoveImage = (color) => {
 
 const WatchPage = () => {
     const [color, setColor] = useState("black")
-    useEffect(() =>{
+    /*useEffect(() =>{
         if(color=="white"){
             
             CreateImage("white");
@@ -43,9 +43,17 @@ const WatchPage = () => {
             CreateImage("black");
             RemoveImage("white");
         }
-      })
+      })*/
       const changeColor = (color) =>{
-        setColor(color)
+        if(color=="white"){
+            
+            CreateImage("white");
+            RemoveImage("black");
+        } else {
+            
+            CreateImage("black");
+            RemoveImage("white");
+        }
       }
     return(
     <div className="page display-flex flex-col justify-center align-center">
@@ -53,24 +61,24 @@ const WatchPage = () => {
         <div className="main-container display-flex">
             <main id="watch-page-content" className="page-content-left-margin display-flex">
                 <section className="w-50">
-                    <div id="watch-blurb" className="background-gradient-grey">
+                    <div id="watch-blurb" className="background-gradient-grey slide-in-from-left ani-slow">
                         <img src={logo} height="200" width="200" className="abs-centered"  />
                         <h1 className="red">Apple Watch</h1>
                         <h2>Change starts within.</h2>
                         <p>Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.</p>
                     </div>
-                    <div>
+                    <div className="slide-up-from-bottom ani-slow">
                         <h4 className="muted">From $699</h4>
                         <a href="#" className="buy-now-red">Buy Now ></a>
                     </div>
                 </section>
                 <section className="w-50" >
-                    <div className="image-container">
-                        <img id="black-watch" className="watch-image" src={process.env.PUBLIC_URL + '/Images/Black Watch-1.png'} />
-                        <img id="white-watch" className="watch-image" src={process.env.PUBLIC_URL + '/Images/White Watch-2.png'} />
+                    <div className="image-container slide-in-from-left-more ani-slow">
+                        <img id="black-watch" className=" watch-image slide-in-from-left" src={process.env.PUBLIC_URL + '/Images/Black Watch-1.png'} />
+                        
                     </div>
                     
-                    <form className="display-flex justify-center">
+                    <form className="display-flex justify-center slide-up-from-bottom ani-slow">
                         <label className="display-flex flex-col align-center" >
                             <input type="radio" name="radio-button" value="white"  />
                             <span 
