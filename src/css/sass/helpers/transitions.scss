@@ -34,6 +34,16 @@
     to{margin-top: 0;}
 }
 
+.slide-up{
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes slide-up{
+    from{margin-top:100%;}
+    to{margin-top: 0;}
+}
 .slide-in-from-left{
     animation-name: slide-in-from-left;
     animation-duration: 1s;
