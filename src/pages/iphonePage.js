@@ -23,7 +23,9 @@ const IphonePage = () => {
         const front = document.getElementById('iphone-front');
         const back = document.getElementById('iphone-back');
         back.style.opacity = sliderVal/100 *2;
+        back.style.marginLeft = 100 - (sliderVal *2) + "%";
         front.style.opacity = 1 - (sliderVal/100 *2);
+        front.style.marginLeft = sliderVal *2 + "%";
    }
     return(
         <div className="page display-flex flex-col justify-center align-center">
@@ -58,7 +60,7 @@ const IphonePage = () => {
                     </div>
                     <div className="image-container display-flex" >
                         <img id="iphone-front" className="abs-centered iphone-images" src={process.env.PUBLIC_URL + '/Images/apple-iphonexs-max-gold@2x.png'} />
-                        <img id="iphone-back" className="abs-centered iphone-images" src={process.env.PUBLIC_URL + '/Images/apple-iphonexs-max-gold-back-3@2x.png'} style={{opacity: "0"}}/>
+                        <img id="iphone-back" className="abs-centered iphone-images" src={process.env.PUBLIC_URL + '/Images/apple-iphonexs-max-gold-back-3@2x.png'} style={{opacity: "0",marginLeft: "100%" }}/>
                     </div>
 
                    
