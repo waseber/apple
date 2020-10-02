@@ -76,7 +76,9 @@
 }
 
 .fade-in{
-    animation: fade 0.5s ease;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
 }
 
 .fade-out{

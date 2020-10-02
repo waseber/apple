@@ -44,7 +44,7 @@ const SignInUp = ({InUp}) => {
             <section className="slide-in-left page background-gradient display-flex flex-col justify-center align-center">   
                 <div id="SignInUp" className="display-flex flex-col justify-center align-center">
                     <form 
-                        className="background-white padding-10 drop-shadow display-flex flex-col align-center "
+                        className="background-white p-10 drop-shadow display-flex flex-col align-center "
                         onSubmit={signUpSubmit} >
                         <h2>{formTypeText}</h2>
                         <label for="frm-name" className="">
@@ -90,7 +90,7 @@ const SignInUp = ({InUp}) => {
             <section className="page background-gradient display-flex flex-col justify-center align-center">   
                 <div id="SignInUp" className="display-flex flex-col justify-center align-center">                    
                     <form 
-                        className="background-white padding-10 drop-shadow display-flex flex-col align-center"
+                        className="background-white p-10 drop-shadow display-flex flex-col align-center"
                         onSubmit={signInSubmit}>
                     <h2>{formTypeText}</h2>
                         <label for="frm-email" className="">

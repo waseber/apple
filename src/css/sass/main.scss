@@ -3,6 +3,7 @@
 @import "./reusable.scss";
 @import "helpers/transitions.scss";
 @import "helpers/radios.scss";
+@import "helpers/slider.scss";
 
 
 html,
@@ -186,7 +187,15 @@ label{
     font-family: 'Poppins-Bold';
     font-size: 20px;
 }
+#iphone-page-content{
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: 1fr 30vh;
+    grid-template-areas: 
+        "blurb blurb image"
+        "buy thumbs image";
 
+}
 #iphone-blurb,
 #watch-blurb{
     padding: 50px;
@@ -196,6 +205,18 @@ label{
         color: #999;
         line-height: 1.5;
     }
+}
+
+#iphone-blurb{
+    grid-area: blurb;
+}
+.iphone-thumbs{
+    margin: 0 5px;
+    height: 20vh;
+}
+#thumb-slider{
+    height: 8px;
+    width: 200px;
 }
 
 #macbook-blurb{

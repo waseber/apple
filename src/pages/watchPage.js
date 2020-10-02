@@ -32,7 +32,7 @@ const RemoveImage = (color) => {
 }
 
 const WatchPage = () => {
-    const [color, setColor] = useState("black")
+    const [color, setColor] = useState("black");
     /*useEffect(() =>{
         if(color=="white"){
             
@@ -56,7 +56,7 @@ const WatchPage = () => {
         }
       }
     return(
-    <div className="page display-flex flex-col justify-center align-center">
+    <div className="page fade-in display-flex flex-col justify-center align-center ani-medium">
         <NavBar landing="false"/>
         <div className="main-container display-flex">
             <main id="watch-page-content" className="page-content-left-margin display-flex">
