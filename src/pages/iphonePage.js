@@ -28,7 +28,7 @@ const IphonePage = () => {
         front.style.marginLeft = sliderVal *2 + "%";
    }
     return(
-        <div className="page slide-up ">
+        <div className="page slide-up display-flex flex-col justify-center align-center">
             <NavBar landing="false"/>
             <div className="main-container display-flex">
                 <main id="iphone-page-content" className="page-content-left-margin ">

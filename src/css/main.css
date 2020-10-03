@@ -587,6 +587,10 @@ body {
   top: 0;
   right: 0;
   left: 0; }
+  @media screen and (max-width: 992px) {
+    .page {
+      position: relative;
+      height: auto; } }
 
 a {
   color: #5AC8FA;

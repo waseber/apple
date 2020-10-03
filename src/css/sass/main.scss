@@ -49,6 +49,12 @@ body{
     top:0;
     right: 0;
     left: 0;
+
+    @media screen and (max-width: 992px){
+        position: relative;
+        height: auto;
+
+    }
 }
 a{
     color: $link-color;

@@ -61,8 +61,8 @@ const WatchPage = () => {
         <div className="main-container display-flex">
             <main id="watch-page-content" className="page-content-left-margin display-flex">
                 <section className="w-50">
-                    <div id="watch-blurb" className="background-gradient-grey slide-in-from-left ani-slow">
-                        <img src={logoGrey} height="200" width="200" className="abs-centered"  />
+                    <div id="watch-blurb" className="background-gradient-grey slide-in-from-left ani-slow" style={{position: 'relative'}}>
+                        <img src={logoGrey} height="200" width="200" style={{position: 'absolute', right: '0'}} />
                         <h1 className="red">Apple Watch</h1>
                         <h2>Change starts within.</h2>
                         <p>Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.</p>

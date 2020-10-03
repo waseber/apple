@@ -28,7 +28,9 @@ const MacbookPage = () => (
                         
                     </section>
                     <footer id="macbook-footer">
-                        <a href="#" className="bold fade-in ani-slow">Buy Now ></a>
+                        <a href="#" 
+                            className="bold fade-in ani-slow" 
+                            style={{padding: "0 6rem 0 3rem"}}>Buy Now ></a>
                         <div id="desktop-image" ></div>
                         <SubscribeModal />
                     </footer>
