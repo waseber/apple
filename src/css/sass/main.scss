@@ -1,9 +1,13 @@
 @import "helpers/fonts.scss";
 @import "helpers/variables.scss";
-@import "./reusable.scss";
+@import "helpers/reusable.scss";
 @import "helpers/transitions.scss";
 @import "helpers/radios.scss";
 @import "helpers/slider.scss";
+@import "components/NavBar.scss";
+@import "components/IphonePage.scss";
+@import "components/WatchPage.scss";
+@import "components/MacbookPage.scss";
 
 
 html,
@@ -18,6 +22,11 @@ body{
     font-size: 75%; //allows us to use REM
     font-size: 14px;
     overflow: hidden;
+
+    @media screen and (max-width: 992px){
+        overflow: auto;
+
+    }
 }
 
 
@@ -53,20 +62,16 @@ li{
 h1{
     margin: 0;
     font-family: $h1-font;
-    font-size: 2rem;
+    font-size: 4vh;
 }
 h2{
     margin: 0;
     font-family: $h2-font;
-    font-size: 5rem;
+    font-size: 10vh;
     line-height: 1.2;
 }
 
 h3{
-
-}
-
-h4{
     margin: 0;
     font-family: 'Poppins-Bold';
     font-size: 5vh;
@@ -113,66 +118,6 @@ label{
     text-transform: capitalize;
 }
 
-//navbar
-.top-nav{
-    width: 100vw;
-    height: 10vh;
-    background-color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    ul{
-        margin: 0 100px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-}
-#nav-logo-container{
-    background: #000;
-    height: 10vh;
-    width: 10vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav__textLink{
-    color: $nav-link-color;
-    font-family: 'Poppins';
-    font-size: 2vh;
-    text-decoration: none;
-}
-
-.nav__textLink.active{
-    font-family: 'Poppins-Bold';
-}
-
-.nav__textLink--button{
-    padding: 10px 20px;
-    background: $light-blue;
-    color: #FFF;
-    font-family: 'Poppins-Medium';
-    border-radius: 23px;
-}
-.iconNav--right{
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.iconNav__iconLink{
-    color: $nav-link-color;
-    opacity: 0.5;
-    font-size: 20px;
-    text-decoration: none; 
-}
-
-.iconNav__iconLink.active{
-    opacity: 1; 
-}
 
 //landing page
 #date-counter{
@@ -186,121 +131,4 @@ label{
     color: $red;
     font-family: 'Poppins-Bold';
     font-size: 20px;
-}
-#iphone-page-content{
-    display: grid;
-    grid-template-columns: 1fr 20vw 1fr;
-    grid-template-rows: 1fr 30vh;
-    grid-template-areas: 
-        "blurb blurb image"
-        "buy thumbs image";
-
-}
-#iphone-blurb,
-#watch-blurb{
-    padding: 50px;
-
-    p{
-        font-size: 2.5vh;
-        color: #999;
-        line-height: 1.5;
-    }
-}
-
-#iphone-blurb{
-    grid-area: blurb;
-}
-.thumbs-container{
-    grid-area: thumbs;
-    padding-top: 5vh;
-}
-.iphone-thumbs{
-    margin: 0 5px;
-    height: 20vh;
-}
-#thumb-slider{
-    height: 8px;
-    width: 200px;
-}
-
-.image-container{
-    grid-area: image;
-    position: relative;
-    width: 20vw;
-    height: 80vh;
-}
-
-.iphone-images{
-}
-
-#macbook-blurb{
-    background-color: #000;
-
-    h1{
-        color: $light-blue;
-    }
-    h2{
-        color: #FFF;
-    }
-}
-#macbook-image{
-    margin-right: 20vw;
-    flex-grow: 1;
-    background: linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0),rgba(0,0,0,1)), url(/Images/macbook-pro.jpg) left top no-repeat;
-    background-size: contain;
-
-}
-
-#macbook-footer{
-    margin-top: 5vh;
-    height: 30vh;
-    display: flex;
-}
-
-#desktop-image{
-    height: 100%;
-    width: 40%;
-    background: url(/Images/desktop.jpg) center top no-repeat;
-    background-size: cover;
-}
-
-#subscribe-modal{
-    position: absolute;
-    right: 0;
-    padding: 20px 30px;
-    height: 30vh;
-    background: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    //tranistion
-    margin-top: -10vh;
-    transition: margin-top 3s ease;
-
-    form{
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-.image-container{
-    position: relative;
-    height: 60vh;
-    width: 100%
-}
-
-.watch-image{
-    position: absolute;
-    height: 60vh;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.circle{
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 1px solid black;
-    background: black;
 }

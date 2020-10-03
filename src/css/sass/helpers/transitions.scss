@@ -10,12 +10,12 @@
     animation-duration: 3s!important;
 }
 
+.ani-delay{
+    animation-delay: 1.2s;
+}
+// for pages
 .slide-in-left{
     animation: slide-in-left 0.5s ease;
-}
-
-.slide-in-right{
-    animation: slide-in-left 0.5s ease reverse;
 }
 
 @keyframes slide-in-left{
@@ -23,6 +23,28 @@
     to{left: 0;}
 }
 
+.slide-in-right{
+    animation: slide-in-right 0.5s ease;
+}
+
+@keyframes slide-in-right{
+    from{left:100%;}
+    to{right: 0;}
+}
+
+
+
+.slide-up{
+    animation-name: slide-up;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+@keyframes slide-up{
+    from{margin-top:100%;}
+    to{margin-top: 0;}
+}
+// End pages
 .slide-up-from-bottom{
     animation-name: slide-up-from-bottom;
     animation-duration: 1s;
@@ -34,16 +56,17 @@
     to{margin-top: 0;}
 }
 
-.slide-up{
-    animation-name: slide-up;
+.slide-down-from-top{
+    animation-name: slide-down-from-top;
     animation-duration: 1s;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 
-@keyframes slide-up{
-    from{margin-top:100%;}
+@keyframes slide-down-from-top{
+    from{margin-top:-10%;}
     to{margin-top: 0;}
 }
+
 .slide-in-from-left{
     animation-name: slide-in-from-left;
     animation-duration: 1s;
@@ -55,6 +78,19 @@
         margin-right:10%;}
     to{margin-left: 0;
         margin-right:0;}
+}
+
+.slide-in-from-right-more{
+    animation-name: slide-in-from-right-more;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes slide-in-from-right-more{
+    from{margin-right:-20%;
+        margin-left:20%;}
+    to{margin-right: 0;
+        margin-left:0;}
 }
 
 .slide-in-from-left-more{

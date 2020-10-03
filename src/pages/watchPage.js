@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import NavBar from '../components/NavBar';
 import IconNav from '../components/IconNav';
-import logo from '../apple_logo.svg';
+import logoGrey from '../apple-grey.svg';
 
 const CreateImage = (color) => {
     //<img id="white-watch" className="watch-image" src={process.env.PUBLIC_URL + '/Images/White Watch-2.png'} />
@@ -56,19 +56,19 @@ const WatchPage = () => {
         }
       }
     return(
-    <div className="page fade-in display-flex flex-col justify-center align-center ani-medium">
+    <div className="page fade-in ani-medium">
         <NavBar landing="false"/>
         <div className="main-container display-flex">
             <main id="watch-page-content" className="page-content-left-margin display-flex">
                 <section className="w-50">
                     <div id="watch-blurb" className="background-gradient-grey slide-in-from-left ani-slow">
-                        <img src={logo} height="200" width="200" className="abs-centered"  />
+                        <img src={logoGrey} height="200" width="200" className="abs-centered"  />
                         <h1 className="red">Apple Watch</h1>
                         <h2>Change starts within.</h2>
                         <p>Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.</p>
                     </div>
                     <div className="slide-up-from-bottom ani-slow">
-                        <h4 className="muted">From $699</h4>
+                        <h3 className="muted">From $699</h3>
                         <a href="#" className="buy-now-red">Buy Now ></a>
                     </div>
                 </section>

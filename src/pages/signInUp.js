@@ -54,7 +54,8 @@ const SignInUp = ({InUp}) => {
                                 id="frm-name"  
                                 placeholder="John Doe"
                                 value={name}
-                                onChange={e => setName(e.target.value)}/>
+                                onChange={e => setName(e.target.value)}
+                                required/>
                         </label>
         
                         <label for="frm-email" className="">
@@ -64,7 +65,8 @@ const SignInUp = ({InUp}) => {
                                 id="frm-email" 
                                 placeholder="user@email.com" 
                                 value={email}
-                                onChange={e => setEmail(e.target.value)} />
+                                onChange={e => setEmail(e.target.value)}
+                                required />
                         </label>
         
                         <label for="frm-password" className="">
@@ -74,7 +76,8 @@ const SignInUp = ({InUp}) => {
                                 id="frm-password" 
                                 placeholder="*****************" 
                                 value={password}
-                                onChange={e => setPass(e.target.value)}/>
+                                onChange={e => setPass(e.target.value)}
+                                required/>
                         </label>
         
                         <button type="submit">{formTypeText}</button>
@@ -100,7 +103,8 @@ const SignInUp = ({InUp}) => {
                                 id="frm-email" 
                                 placeholder="user@email.com" 
                                 value={email}
-                                onChange={e => setEmail(e.target.value)} />
+                                onChange={e => setEmail(e.target.value)}
+                                required />
                         </label>
         
                         <label for="frm-password" className="">
@@ -110,7 +114,8 @@ const SignInUp = ({InUp}) => {
                                 id="frm-password" 
                                 placeholder="*****************" 
                                 value={password}
-                                onChange={e => setPass(e.target.value)} />
+                                onChange={e => setPass(e.target.value)} 
+                                required/>
                         </label>
         
                         <button type="submit">{formTypeText}</button>

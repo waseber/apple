@@ -7,7 +7,7 @@ const NavBar = ({landing}) => {
         return (
             <nav className="top-nav">
                 <div id="nav-logo-container" className="w-100">
-                    <img src={logo} height="80" width="80" />
+                    <img src={logo} height="40" />
                 </div>
             </nav>
         )
@@ -16,7 +16,7 @@ const NavBar = ({landing}) => {
             <>
                 <nav className="top-nav">
                     <div id="nav-logo-container" className="">
-                        <Link to="/"><img src={logo} height="80" width="80" /></Link>
+                        <Link to="/"><img src={logo} height="40"/></Link>
                     </div>
                     <ul>
                         <li>

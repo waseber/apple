@@ -1,0 +1,42 @@
+#iphone-page-content{
+    display: grid;
+    grid-template-columns: 1fr 20vw 1fr;
+    grid-template-rows: 1fr 30vh;
+    grid-template-areas: 
+        "blurb blurb image"
+        "buy thumbs image";
+
+}
+#iphone-blurb,
+#watch-blurb{
+    padding: 50px;
+
+    p{
+        font-size: 2.5vh;
+        color: #999;
+        line-height: 1.5;
+    }
+}
+
+#iphone-blurb{
+    grid-area: blurb;
+}
+.thumbs-container{
+    grid-area: thumbs;
+    padding-top: 5vh;
+}
+.iphone-thumbs{
+    margin: 0 5px;
+    height: 20vh;
+}
+#thumb-slider{
+    margin: 0;
+    height: 8px;
+    width: 200px;
+}
+
+.image-container--iphone{
+    grid-area: image;
+    position: relative;
+    height: 80vh;
+}

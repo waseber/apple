@@ -1,0 +1,27 @@
+#watch-page-content{
+    @media screen and(max-width: 992px) {
+        flex-direction: column;
+    }
+}
+
+.image-container{
+    position: relative;
+    height: 60vh;
+    width: 100%
+}
+
+.watch-image{
+    position: absolute;
+    height: 60vh;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: black;
+}

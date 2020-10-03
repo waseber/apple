@@ -85,10 +85,10 @@
 .page-content-margins {
   margin: 0 auto;
   height: 100%;
-  width: calc(100% - 18vw); }
+  width: calc(100% - 20vh); }
 
 .page-content-left-margin {
-  margin: 0 0 0 100px;
+  margin: 0 0 0 10vh;
   width: 100%;
   height: 100%; }
 
@@ -171,17 +171,37 @@
 .ani-slow {
   animation-duration: 3s !important; }
 
+.ani-delay {
+  animation-delay: 1.2s; }
+
 .slide-in-left {
   animation: slide-in-left 0.5s ease; }
-
-.slide-in-right {
-  animation: slide-in-left 0.5s ease reverse; }
 
 @keyframes slide-in-left {
   from {
     left: 100%; }
   to {
     left: 0; } }
+
+.slide-in-right {
+  animation: slide-in-right 0.5s ease; }
+
+@keyframes slide-in-right {
+  from {
+    left: 100%; }
+  to {
+    right: 0; } }
+
+.slide-up {
+  animation-name: slide-up;
+  animation-duration: 0.3s;
+  animation-timing-function: linear; }
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%; }
+  to {
+    margin-top: 0; } }
 
 .slide-up-from-bottom {
   animation-name: slide-up-from-bottom;
@@ -194,14 +214,14 @@
   to {
     margin-top: 0; } }
 
-.slide-up {
-  animation-name: slide-up;
+.slide-down-from-top {
+  animation-name: slide-down-from-top;
   animation-duration: 1s;
-  animation-timing-function: linear; }
+  animation-timing-function: ease; }
 
-@keyframes slide-up {
+@keyframes slide-down-from-top {
   from {
-    margin-top: 100%; }
+    margin-top: -10%; }
   to {
     margin-top: 0; } }
 
@@ -217,6 +237,19 @@
   to {
     margin-left: 0;
     margin-right: 0; } }
+
+.slide-in-from-right-more {
+  animation-name: slide-in-from-right-more;
+  animation-duration: 1s;
+  animation-timing-function: ease; }
+
+@keyframes slide-in-from-right-more {
+  from {
+    margin-right: -20%;
+    margin-left: 20%; }
+  to {
+    margin-right: 0;
+    margin-left: 0; } }
 
 .slide-in-from-left-more {
   animation-name: slide-in-from-left-more;
@@ -356,6 +389,168 @@ input[type=range]:focus::-ms-fill-upper {
 body {
   padding: 30px; }
 
+.top-nav {
+  width: 100vw;
+  height: 10vh;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .top-nav ul {
+    margin: 0 10vh;
+    display: flex;
+    justify-content: space-between; }
+
+#nav-logo-container {
+  background: #000;
+  height: 10vh;
+  width: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.nav__textLink {
+  color: #707070;
+  font-family: 'Poppins';
+  font-size: 2vh;
+  text-decoration: none; }
+
+.nav__textLink.active {
+  font-family: 'Poppins-Bold'; }
+
+.nav__textLink--button {
+  padding: 10px 20px;
+  background: #5AC8FA;
+  color: #FFF;
+  font-family: 'Poppins-Medium';
+  border-radius: 23px;
+  white-space: pre; }
+
+.iconNav {
+  padding: 0; }
+  .iconNav li {
+    align-items: center; }
+
+.iconNav--right {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center; }
+
+.iconNav__iconLink {
+  color: #707070;
+  opacity: 0.5;
+  font-size: 20px;
+  text-decoration: none; }
+
+.iconNav__iconLink.active {
+  opacity: 1; }
+
+#iphone-page-content {
+  display: grid;
+  grid-template-columns: 1fr 20vw 1fr;
+  grid-template-rows: 1fr 30vh;
+  grid-template-areas: "blurb blurb image" "buy thumbs image"; }
+
+#iphone-blurb,
+#watch-blurb {
+  padding: 50px; }
+  #iphone-blurb p,
+  #watch-blurb p {
+    font-size: 2.5vh;
+    color: #999;
+    line-height: 1.5; }
+
+#iphone-blurb {
+  grid-area: blurb; }
+
+.thumbs-container {
+  grid-area: thumbs;
+  padding-top: 5vh; }
+
+.iphone-thumbs {
+  margin: 0 5px;
+  height: 20vh; }
+
+#thumb-slider {
+  margin: 0;
+  height: 8px;
+  width: 200px; }
+
+.image-container--iphone {
+  grid-area: image;
+  position: relative;
+  height: 80vh; }
+
+@media screen and (max-width: 992px) {
+  #watch-page-content {
+    flex-direction: column; } }
+
+.image-container {
+  position: relative;
+  height: 60vh;
+  width: 100%; }
+
+.watch-image {
+  position: absolute;
+  height: 60vh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: black; }
+
+#macbook-blurb {
+  background-color: #000; }
+  @media screen and (max-width: 992px) {
+    #macbook-blurb {
+      flex-direction: column; } }
+  #macbook-blurb h1 {
+    color: #5AC8FA; }
+  #macbook-blurb h2 {
+    color: #FFF; }
+
+#macbook-image {
+  margin-right: 20vw;
+  flex-grow: 1;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0), black), url(/Images/macbook-pro.jpg) left top no-repeat;
+  background-size: contain; }
+
+#macbook-footer {
+  margin-top: 5vh;
+  height: 30vh;
+  display: flex; }
+  @media screen and (max-width: 992px) {
+    #macbook-footer {
+      flex-direction: column; } }
+
+#desktop-image {
+  height: 100%;
+  width: 40%;
+  background: url(/Images/desktop.jpg) center top no-repeat;
+  background-size: cover; }
+
+#subscribe-modal {
+  position: absolute;
+  right: 0;
+  padding: 20px 30px;
+  height: 30vh;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -10vh;
+  transition: margin-top 3s ease; }
+  #subscribe-modal form {
+    display: flex;
+    justify-content: space-between; }
+
 html,
 body {
   margin: 0;
@@ -368,6 +563,10 @@ body {
   font-size: 75%;
   font-size: 14px;
   overflow: hidden; }
+  @media screen and (max-width: 992px) {
+    html,
+    body {
+      overflow: auto; } }
 
 #root {
   height: 100vh;
@@ -400,15 +599,15 @@ li {
 h1 {
   margin: 0;
   font-family: "Poppins-Bold";
-  font-size: 2rem; }
+  font-size: 4vh; }
 
 h2 {
   margin: 0;
   font-family: "Poppins-Bold";
-  font-size: 5rem;
+  font-size: 10vh;
   line-height: 1.2; }
 
-h4 {
+h3 {
   margin: 0;
   font-family: 'Poppins-Bold';
   font-size: 5vh; }
@@ -449,57 +648,6 @@ label {
   font-size: 16px;
   text-transform: capitalize; }
 
-.top-nav {
-  width: 100vw;
-  height: 10vh;
-  background-color: #FFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .top-nav ul {
-    margin: 0 100px;
-    display: flex;
-    justify-content: space-between; }
-
-#nav-logo-container {
-  background: #000;
-  height: 10vh;
-  width: 10vw;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.nav__textLink {
-  color: #707070;
-  font-family: 'Poppins';
-  font-size: 2vh;
-  text-decoration: none; }
-
-.nav__textLink.active {
-  font-family: 'Poppins-Bold'; }
-
-.nav__textLink--button {
-  padding: 10px 20px;
-  background: #5AC8FA;
-  color: #FFF;
-  font-family: 'Poppins-Medium';
-  border-radius: 23px; }
-
-.iconNav--right {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%); }
-
-.iconNav__iconLink {
-  color: #707070;
-  opacity: 0.5;
-  font-size: 20px;
-  text-decoration: none; }
-
-.iconNav__iconLink.active {
-  opacity: 1; }
-
 #date-counter {
   font-family: 'Poppins-Bold';
   font-size: 62px; }
@@ -508,97 +656,3 @@ label {
   color: #FF2D55;
   font-family: 'Poppins-Bold';
   font-size: 20px; }
-
-#iphone-page-content {
-  display: grid;
-  grid-template-columns: 1fr 20vw 1fr;
-  grid-template-rows: 1fr 30vh;
-  grid-template-areas: "blurb blurb image" "buy thumbs image"; }
-
-#iphone-blurb,
-#watch-blurb {
-  padding: 50px; }
-  #iphone-blurb p,
-  #watch-blurb p {
-    font-size: 2.5vh;
-    color: #999;
-    line-height: 1.5; }
-
-#iphone-blurb {
-  grid-area: blurb; }
-
-.thumbs-container {
-  grid-area: thumbs;
-  padding-top: 5vh; }
-
-.iphone-thumbs {
-  margin: 0 5px;
-  height: 20vh; }
-
-#thumb-slider {
-  height: 8px;
-  width: 200px; }
-
-.image-container {
-  grid-area: image;
-  position: relative;
-  width: 20vw;
-  height: 80vh; }
-
-#macbook-blurb {
-  background-color: #000; }
-  #macbook-blurb h1 {
-    color: #5AC8FA; }
-  #macbook-blurb h2 {
-    color: #FFF; }
-
-#macbook-image {
-  margin-right: 20vw;
-  flex-grow: 1;
-  background: linear-gradient(to right, black, rgba(0, 0, 0, 0), black), url(/Images/macbook-pro.jpg) left top no-repeat;
-  background-size: contain; }
-
-#macbook-footer {
-  margin-top: 5vh;
-  height: 30vh;
-  display: flex; }
-
-#desktop-image {
-  height: 100%;
-  width: 40%;
-  background: url(/Images/desktop.jpg) center top no-repeat;
-  background-size: cover; }
-
-#subscribe-modal {
-  position: absolute;
-  right: 0;
-  padding: 20px 30px;
-  height: 30vh;
-  background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: -10vh;
-  transition: margin-top 3s ease; }
-  #subscribe-modal form {
-    display: flex;
-    justify-content: space-between; }
-
-.image-container {
-  position: relative;
-  height: 60vh;
-  width: 100%; }
-
-.watch-image {
-  position: absolute;
-  height: 60vh;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); }
-
-.circle {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 1px solid black;
-  background: black; }
